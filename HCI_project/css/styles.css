@@ -1,0 +1,99 @@
+a{
+	color:black;
+	text-decoration: none;
+	
+}
+.lightgreen{
+	border-style:solid; 
+	border-width:0px 0px 1px 5px; 
+	border-color:#ACA8AD; 
+	transition: background-color 0.3s,border-color 0.3s;
+}
+.lightshade:hover{
+	background-color:#A6A5A4;
+	color:white;
+}
+.lightgreen:hover{
+	color: white;
+	background-color:#A6A5A4;
+	border-style: solid;
+	border-width: 0px 0px 1px 5px;
+	border-color:#455A64;
+}
+
+.hci-nav {
+	width: 100%;
+}
+.hci-nav li {
+	position: relative;
+	width: 16.6667%;
+	text-align: center;
+}
+
+.hci-nav li::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background: #EBEBEB;
+	right: 0;
+	top: 0;
+}
+
+.hci-nav li:nth-child(6)::after {
+	content: '';
+	position: absolute;
+	width: 0px;
+	height: 100%;
+	background: #EBEBEB;
+	right: 0;
+	top: 0;
+}
+
+.hci-nav li a.hover-over::after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 0px;
+	background: #455A64;
+	left: 0;
+	bottom: 0;
+	transition: 
+		width 0.2s ease-in-out,
+		height 0.2s ease-in-out;
+}
+
+.hci-nav li a.hover-over:hover::after {
+	width: 100%;
+	height: 5px;
+}
+
+.hci-nav li a.hover-active::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background: #455A64;
+	left: 0;
+	bottom: 0;
+}
+
+@media all and (max-width: 768px) {
+	.hci-nav li::after {
+		content: '';
+		position: absolute;
+		width: 0px;
+		height: 100%;
+		background: #EBEBEB;
+		right: 0;
+		top: 0;
+	}
+
+	.hci-nav li {
+		width: 100%;
+	}
+
+	.hci-nav li {
+		border-bottom: 1px solid #e1e1e1;
+	}
+}
